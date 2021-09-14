@@ -66,10 +66,14 @@ import CaughtPokemon from "./CaughtPokemon.js";
 // };
 
 const App = () => {
+  const logWhenClicked = () =>{
+    console.log("Image was clicked");
+  };
+  
   const date = new Date().toLocaleDateString();
   return (
     <div>
-      <Logo appName="Pokedex"/>
+      <Logo appName="Pokedex" handleClick={logWhenClicked}/>
       <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]}/>
       <CaughtPokemon date={date}/>
     </div>
