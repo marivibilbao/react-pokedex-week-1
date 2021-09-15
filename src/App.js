@@ -1,3 +1,25 @@
+import React from "react";
+import Logo from "./Logo.js";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
+
+const App = () => {
+  const logWhenClicked = () =>{
+    console.log("Image was clicked");
+  };
+  
+  const date = new Date().toLocaleDateString();
+  return (
+    <div>
+      <Logo appName="Pokedex" handleClick={logWhenClicked}/>
+      <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]}/>
+      <CaughtPokemon date={date}/>
+    </div>
+  );
+};
+
+export default App;
+
 //Exercise D se debe borrar
 // import logo from './logo.svg';
 // import './App.css';
@@ -22,11 +44,6 @@
 //     </div>
 //   );
 // }
-
-import React from "react";
-import Logo from "./Logo.js";
-import BestPokemon from "./BestPokemon.js";
-import CaughtPokemon from "./CaughtPokemon.js";
 
 // const Logo = () => {
 //   //const welcomeMessage = "Welcome to the Pokedex";
@@ -64,20 +81,3 @@ import CaughtPokemon from "./CaughtPokemon.js";
 //     //<p>My favorite Pokémon is {myBestPokemon.join(', ')}</p>
 //   );
 // };
-
-const App = () => {
-  const logWhenClicked = () =>{
-    console.log("Image was clicked");
-  };
-  
-  const date = new Date().toLocaleDateString();
-  return (
-    <div>
-      <Logo appName="Pokedex" handleClick={logWhenClicked}/>
-      <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]}/>
-      <CaughtPokemon date={date}/>
-    </div>
-  );
-};
-
-export default App;
