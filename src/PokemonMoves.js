@@ -22,6 +22,12 @@ function PokemonMoves() {
             return <li key={index}>{move.move.name}</li>;
           })}
         </ul>
+        <p>{pokemonData.name}'s abilities:</p>
+        <ul>
+          {pokemonData.abilities.map((ability, index) => {
+            return <li key={index}>{ability.ability.name}</li>;
+          })}
+        </ul>
       </div>
     );
   } else {
