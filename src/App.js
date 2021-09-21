@@ -4,6 +4,7 @@ import BestPokemon from "./BestPokemon";
 import CaughtPokemon from "./CaughtPokemon";
 // import PokemonMoves from "./PokemonMoves.js";
 import PokemonMovesSelector from "./PokemonMovesSelector.js";
+import PokemonCity from "./PokemonCity.js";
 
 const App = () => {
   const logWhenClicked = () =>{
@@ -18,6 +19,7 @@ const App = () => {
       <CaughtPokemon date={date}/>
       <PokemonMovesSelector/>
       {/* <PokemonMoves/> */}
+      <PokemonCity/>
     </div>
   );
 };
